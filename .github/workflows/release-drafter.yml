@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  changes:
+  detect-packages:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: read
