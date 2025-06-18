@@ -32,7 +32,7 @@ jobs:
           filters: ${{ steps.filter-setup.outputs.filters }}
 
   release-drafter:
-    needs: changes
+    needs: detect-packages
     runs-on: ubuntu-latest
     timeout-minutes: 30
     if: needs.detect-packages.outputs.packages != '[]' # Ensure job runs only if there are changes
