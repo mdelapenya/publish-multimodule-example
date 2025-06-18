@@ -38,6 +38,8 @@ jobs:
     if: needs.detect-packages.outputs.packages != '[]' # Ensure job runs only if there are changes
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    permissions:
+      contents: write  # for release-drafter/release-drafter to create a github release
     strategy:
       matrix:
         package: ${{ fromJSON(needs.detect-packages.outputs.packages || '[]') }}
