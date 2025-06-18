@@ -1,3 +1,3 @@
 package modulea
 
-var Version = "0.4.0"
+var Version = "1.0.0"
